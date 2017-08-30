@@ -4,6 +4,7 @@ GTMBase64
 Base64加解密
 
 使用方法：
+
 1）丢入ios项目。
 【注意】开启ARC的同学注意
 解决方法：`-fno-objc-arc`
@@ -25,3 +26,5 @@ Base64加解密
 ```
 * thread #1, queue = 'com.apple.main-thread', stop reason = Heap buffer overflow
 ```
+
+问题定位：对于单字符数据进行加密会出现问题，多字符不会  eg: @"3" @"a" 会出现问题
